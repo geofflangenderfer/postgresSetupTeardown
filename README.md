@@ -23,12 +23,12 @@ ALTER ROLE
 # testQueries.sh
 ...
 loadData() {
-  psql -c "\copy *departments* from '$1/departments.csv' with (format csv, header true);" $testDbLogin
-  psql -c "\copy *employees* from '$1/employees.csv' with (format csv, header true);" $testDbLogin
-  psql -c "\copy *dept_emp* from '$1/dept_emp.csv' with (format csv, header true);" $testDbLogin
-  psql -c "\copy *dept_manager* from '$1/dept_manager.csv' with (format csv, header true);" $testDbLogin
-  psql -c "\copy *salaries* from '$1/salaries.csv' with (format csv, header true);" $testDbLogin
-  psql -c "\copy *titles* from '$1/titles.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <departments> from '$1/departments.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <employees> from '$1/employees.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <dept_emp> from '$1/dept_emp.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <dept_manager> from '$1/dept_manager.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <salaries> from '$1/salaries.csv' with (format csv, header true);" $testDbLogin
+  psql -c "\copy <titles> from '$1/titles.csv' with (format csv, header true);" $testDbLogin
 }
 ...
 ```
