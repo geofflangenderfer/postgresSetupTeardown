@@ -32,7 +32,7 @@ loadData() {
 }
 ...
 ```
-- update parameters 
+- update `run.sh` parameters 
 ```bash
 #!/usr/bin/env bash
 
