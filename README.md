@@ -1,13 +1,30 @@
+## What is this?
+- These scripts use `psql` and bash to automate:
+  - database setup
+  - creating tables
+  - loading data from csv
+  - querying tables
+  - database teardown
+```bash
+$ ./run.sh && cat output.txt | head -20
+db refresh...
+---------------------------------------------
+DROP DATABASE
+CREATE DATABASE
+---------------------------------------------
+creating tables...
+---------------------------------------------
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+---------------------------------------------
+```
+
 ## Why did you do this?
 calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. It took ~10 hours to write this, but grading an assignment now takes ~0.33 hours
-
-## What is this?
-These scripts use `psql` and bash to automate:
-- database setup
-- creating tables
-- loading data from csv
-- querying tables
-- database teardown
 
 ## How can I use this?
 - [install postgres][2]
@@ -37,9 +54,9 @@ loadData() {
 #!/usr/bin/env bash
 
 ./testQueries.sh \
-  schema.sql \  # table creation logic
-  queries.sql \ # table query logic
-  data \        # target data location
+  sql/schema.sql `# table creation logic` \
+  sql/queries.sql `# table query logic` \
+  data/ `# target data location` \
   &> output.txt 
 ```
 - call `run.sh` 
@@ -48,7 +65,8 @@ $ ./run.sh
 ```
 
 - check `output.txt` when finished
-```txt
+```bash
+$ cat output.txt
 db refresh...
 ---------------------------------------------
 DROP DATABASE

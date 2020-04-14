@@ -15,6 +15,7 @@ main() {
   echo "table names.."
   echo "---------------------------------------------"
   queryTableNames 
+  echo "---------------------------------------------"
   echo "loading data..."
   echo "---------------------------------------------"
   loadData $3 # must update for different table names
@@ -25,7 +26,7 @@ main() {
   echo "---------------------------------------------"
   echo "db refresh..."
   echo "---------------------------------------------"
-  #refreshDb
+  refreshDb
 }
 refreshDb() {
   psql -c "drop database test;" $postgresDbLogin
@@ -38,6 +39,7 @@ loadFile() {
   psql -f $1 $testDbLogin
 }
 loadData() {
+  echo "loadData was passed $1"
   psql -c "\copy departments from '$1/departments.csv' with (format csv, header true);" $testDbLogin
   psql -c "\copy employees from '$1/employees.csv' with (format csv, header true);" $testDbLogin
   psql -c "\copy dept_emp from '$1/dept_emp.csv' with (format csv, header true);" $testDbLogin
@@ -48,4 +50,5 @@ loadData() {
 queryTableNames() {
   psql -c "\dt" $testDbLogin
 }
+#echo "1 is $1 2 is $2 3 is $3"
 main $1 $2 $3
