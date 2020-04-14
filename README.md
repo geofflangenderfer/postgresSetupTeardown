@@ -1,5 +1,5 @@
 ## Why did you do this?
-calling psql commands by hand was taking ~1.25 hours to grade an assignment. It took ~10 hours to write this, but grading an assignment now takes ~0.33 hours
+calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. It took ~10 hours to write this, but grading an assignment now takes ~0.33 hours
 
 ## What is this?
 These scripts use psql and bash to automate:
