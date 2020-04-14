@@ -2,7 +2,7 @@
 calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. It took ~10 hours to write this, but grading an assignment now takes ~0.33 hours
 
 ## What is this?
-These scripts use psql and bash to automate:
+These scripts use `psql` and bash to automate:
 - database setup
 - creating tables
 - loading data from csv
@@ -10,11 +10,8 @@ These scripts use psql and bash to automate:
 - database teardown
 
 ## How can I use this?
-- install postgres[2]
+- [install postgres][2]
 - [start postgres server][1]
-```bash
-$ postgres -D /usr/local/pgsql/data >logfile 2>&1 &
-```
 - [set postgres user password][0] to 'password'
 ```bash
 $ sudo -u postgres psql
