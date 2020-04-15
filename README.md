@@ -6,7 +6,7 @@
   - querying tables
   - database teardown
 ```bash
-$ ./run.sh && cat queryOutput.txt | head -20
+$ ./run.sh && cat output/queryOutput.txt | head -20
 db refresh...
 ---------------------------------------------
 DROP DATABASE
@@ -43,7 +43,7 @@ ALTER ROLE
 ```
 - check that student table names coincide with `loadData`
 ```bash
-# getQueryOutput.sh
+# src/getQueryOutput.sh
 ...
 loadData() {
   psql -c "\copy <departments> from '$1/departments.csv' with (format csv, header true);" $testDbLogin
@@ -59,20 +59,20 @@ loadData() {
 ```bash
 #!/usr/bin/env bash
 
-./getQueryOutput.sh \
+./src/getQueryOutput.sh \
   sql/schema.sql `# table creation logic` \
   sql/queries.sql `# table query logic` \
-  data/ `# input data location` \
-  &> queryOutput.txt 
+  data/ `# target data location` \
+  &> output/queryOutput.txt 
 ```
 - call `run.sh` 
 ```bash
 $ ./run.sh
 ```
 
-- check `queryOutput.txt` when finished
+- check `output/queryOutput.txt` when finished
 ```bash
-$ cat queryOutput.txt
+$ cat output/queryOutput.txt
 db refresh...
 ---------------------------------------------
 DROP DATABASE
