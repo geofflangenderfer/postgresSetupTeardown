@@ -10,7 +10,7 @@ main() {
   echo "---------------------------------------------"
   echo "creating tables..."
   echo "---------------------------------------------"
-  loadFile $1 # must update for each student
+  loadFile $1 
   echo "---------------------------------------------"
   echo "table names.."
   echo "---------------------------------------------"
@@ -18,11 +18,11 @@ main() {
   echo "---------------------------------------------"
   echo "loading data..."
   echo "---------------------------------------------"
-  loadData $3 # must update for different table names
+  loadData $3 
   echo "---------------------------------------------"
   echo "querying tables..."
   echo "---------------------------------------------"
-  loadFile $2 # must update for each student
+  loadFile $2 
   echo "---------------------------------------------"
   echo "db refresh..."
   echo "---------------------------------------------"
