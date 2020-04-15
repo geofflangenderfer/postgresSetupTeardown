@@ -26,6 +26,12 @@ CREATE TABLE
 ## Why did you do this?
 calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. It took ~10 hours to write this, but grading an assignment now takes ~0.33 hours
 
+## What tech stack did you use?
+- mac/linux/WSL terminal environment
+- `psql`
+- PostgreSQL database
+- bash 
+
 ## How can I use this?
 - [install postgres][2]
 - [start postgres server][1]
