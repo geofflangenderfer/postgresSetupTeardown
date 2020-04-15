@@ -49,5 +49,4 @@ loadData() {
 queryTableNames() {
   psql -c "\dt" $testDbLogin
 }
-#echo "1 is $1 2 is $2 3 is $3"
 main $1 $2 $3
