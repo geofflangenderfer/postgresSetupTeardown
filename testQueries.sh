@@ -39,7 +39,6 @@ loadFile() {
   psql -f $1 $testDbLogin
 }
 loadData() {
-  echo "loadData was passed $1"
   psql -c "\copy departments from '$1/departments.csv' with (format csv, header true);" $testDbLogin
   psql -c "\copy employees from '$1/employees.csv' with (format csv, header true);" $testDbLogin
   psql -c "\copy dept_emp from '$1/dept_emp.csv' with (format csv, header true);" $testDbLogin
