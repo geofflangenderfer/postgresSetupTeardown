@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-./testQueries.sh \
+./getQueryOutput.sh \
   sql/schema.sql `# table creation logic` \
   sql/queries.sql `# table query logic` \
   data/ `# target data location` \
-  &> output.txt 
+  &> queryOutput.txt 
 

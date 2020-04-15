@@ -6,7 +6,7 @@
   - querying tables
   - database teardown
 ```bash
-$ ./run.sh && cat output.txt | head -20
+$ ./run.sh && cat queryOutput.txt | head -20
 db refresh...
 ---------------------------------------------
 DROP DATABASE
@@ -43,7 +43,7 @@ ALTER ROLE
 ```
 - check that student table names coincide with `loadData`
 ```bash
-# testQueries.sh
+# getQueryOutput.sh
 ...
 loadData() {
   psql -c "\copy <departments> from '$1/departments.csv' with (format csv, header true);" $testDbLogin
@@ -59,20 +59,20 @@ loadData() {
 ```bash
 #!/usr/bin/env bash
 
-./testQueries.sh \
+./getQueryOutput.sh \
   sql/schema.sql `# table creation logic` \
   sql/queries.sql `# table query logic` \
   data/ `# target data location` \
-  &> output.txt 
+  &> queryOutput.txt 
 ```
 - call `run.sh` 
 ```bash
 $ ./run.sh
 ```
 
-- check `output.txt` when finished
+- check `queryOutput.txt` when finished
 ```bash
-$ cat output.txt
+$ cat queryOutput.txt
 db refresh...
 ---------------------------------------------
 DROP DATABASE
@@ -93,6 +93,7 @@ ALTER TABLE
 ALTER TABLE
 ALTER TABLE
 ---------------------------------------------
+...
 ```
 
 [0]: https://chartio.com/resources/tutorials/how-to-set-the-default-user-password-in-postgresql/
