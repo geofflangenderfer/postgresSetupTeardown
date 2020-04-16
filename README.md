@@ -33,6 +33,8 @@ calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. I
 - bash 
 
 ## How can I use this?
+Here's a [video](https://youtu.be/ELCZ5dAS6Zg) on correcting your query logic.
+
 - [install postgres][2]
 - [start postgres server][1]
 - [set postgres user password][0] to 'password'
