@@ -1,5 +1,5 @@
 ## What is this?
-- Here's a [video](https://youtu.be/ELCZ5dAS6Zg) on correcting your query logic.
+- Here's a how-to [video](https://youtu.be/ELCZ5dAS6Zg) on correcting your query logic.
 - These scripts use `psql` and bash to automate:
   - database setup
   - creating tables
