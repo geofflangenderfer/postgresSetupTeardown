@@ -1,3 +1,4 @@
+# postgresSetupTeardown Walkthrough
 [![How-To Walkthrough](http://img.youtube.com/vi/ELCZ5dAS6Zg/0.jpg)](http://www.youtube.com/watch?v=ELCZ5dAS6Zg "How-To Walkthrough")
 
 # FAQ
