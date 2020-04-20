@@ -1,3 +1,5 @@
+[![How-To Walkthrough](http://img.youtube.com/vi/ELCZ5dAS6Zg/0.jpg)](http://www.youtube.com/watch?v=ELCZ5dAS6Zg "How-To Walkthrough")
+
 # FAQ
 - <a href="#what-is-this">What is this?</a>
 - <a href="#why-did-you-do-this">Why did you do this?</a>
@@ -5,7 +7,6 @@
 - <a href="#how-can-i-use-this">How can I use this?</a>
 
 ## What is this?
-- Here's a how-to [video](https://youtu.be/ELCZ5dAS6Zg) on correcting your query logic.
 - These scripts use `psql` and bash to automate:
   - database setup
   - creating tables
@@ -40,7 +41,6 @@ calling `psql` commands by hand was taking ~1.25 hours to grade an assignment. I
 - bash 
 
 ## How can I use this?
-
 - [install postgres][2]
 - [start postgres server][1]
 - [set postgres user password][0] to 'password'
