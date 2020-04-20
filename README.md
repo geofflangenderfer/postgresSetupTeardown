@@ -1,3 +1,10 @@
+# FAQ
+- <a href="#what-is-this">What is this?</a>
+- <a href="#why-did-you-do-this">Why did you do this?</a>
+- <a href="#why-did-you-do-this">What tech stack did you use?</a>
+- <a href="#what-tech-stack-did-you-use">What tech stack did you use?</a>
+- <a href="#how-can-i-use-this">How can I use this?</a>
+
 ## What is this?
 - Here's a how-to [video](https://youtu.be/ELCZ5dAS6Zg) on correcting your query logic.
 - These scripts use `psql` and bash to automate:
